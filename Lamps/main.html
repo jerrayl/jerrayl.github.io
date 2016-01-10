@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lights</title>
+<h1 align="center">Welcome to the lamp showcase. Press the switch to control the lights.</h1>
+</head>
+<body>
+
+ 	<div style='position:relative;z-index:0;left:0;top:0;width:100%;height:100%'>   
+    	<img id="picture" src='images/all_off.jpg' style=' width:100%;height:100%'/>
+		<img id="switch" onclick="changeImage()" src='images/switch_off.png' style='width:20%;height:20%;position:absolute;left:30%;bottom:10%'/>
+        </div>
+        
+      <script>
+function changeImage() 
+{
+    var imagePicture = document.getElementById('picture');
+    var imageSwitch = document.getElementById('switch');
+
+    if (imagePicture.src.match("images/all_off.jpg")) 
+    {
+        imagePicture.src = "images/1_on.jpg";
+        imageSwitch.src = "images/switch1.png";
+    } 
+	else if (imagePicture.src.match("images/1_on.jpg")) 
+    {
+        imagePicture.src = "images/2_on.jpg";
+        imageSwitch.src = "images/switch2.png";
+    }
+	else if (imagePicture.src.match("images/2_on.jpg")) 
+    {
+        imagePicture.src = "images/3_on.jpg";
+        imageSwitch.src = "images/switch3.png";
+    }
+	else if (imagePicture.src.match("images/3_on.jpg")) 
+    {
+        imagePicture.src = "images/4_on.jpg";
+        imageSwitch.src = "images/switch4.png";
+    }
+    else 
+    {
+        imagePicture.src = "images/all_off.jpg";
+        imageSwitch.src = "images/switch_off.png";
+
+	}
+}
+</script>
+</body>
+</html>
