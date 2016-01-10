@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <script src='jquery-2.2.0.js' type="text/javascript"></script>
+   <script src="cssmenu.js"></script>
+   <script src="hangman.js"></script>
+   <title>Hangman</title>
+</head>
+<body>
+<h1 align="center">Hangman!</h1>
+<h3>Choose a category:</h3>	
+<form action="">
+<input type="radio" name="category" id="Animals">Animals<br>
+<input type="radio" name="category" id="Fruits">Fruits<br>
+<input type="radio" name="category" id="Transport">Transport<br>
+<input type="radio" name="category" id="Sports">Sports
+</form>
+<button type="button" onClick="categorySelect()">Go!</button> 
+
+<h3 align="left">Guess a letter:</h3>
+<input type="text" id="guessbox" value="Make your guess here"> <button type="button" onClick="getGuess()">Go!</button> 
+<h3 align="left">Letters guessed:</h3>
+<h3 align="left" id="guessed"></h3>
+<h3 align="left">The word is:</h3>
+<h2 align="left" id="word"></h2>
+<h3 align="left" id="result"></h3>
+<img id="hangman" src="images/Hangman-0.png" style='width: 30%; height: 50%; position: absolute; left: 50%; top: 10%'/>
+	
+
+<script>
+var dictionary = [["cat","dog","elephant","rabbit","deer"],["apple","orange","peach","kiwi","apricot"],["car","bicycle","boat","aeroplane","truck"],["badminton", "tennis", "soccer","baseball","hockey"]];
+var random_number = Math.floor((Math.random() * 5) + 1);
+var random_word = "";
+var display = "";
+var guessed = "";
+var tries = 0;
+var matched = false;
+var complete=false;
+var gameover=false;
+</script>
+</body>
+<html>
